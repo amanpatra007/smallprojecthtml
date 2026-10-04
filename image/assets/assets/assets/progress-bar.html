@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        body{
+            background-color: black;
+
+        }
+        .card{
+            background-color: white;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .progress-bar{
+            width: 100%;
+            height: 20px;
+            background-color: gray;
+            border-radius: 10px;
+
+            position: relative;
+            overflow: hidden;
+    
+        }
+        .progress-bar::before{
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: green;
+            animation: progress 5s linear forwards;
+            position: relative;
+
+           
+        clip-path: polygon(0 50%, 5% 0, 10% 50%, 15% 0, 20% 50%, 25% 0, 30% 50%, 35% 0, 40% 50%, 45% 0, 50% 50%, 55% 0, 60% 50%, 65% 0, 70% 50%, 75% 0, 80% 50%, 85% 0, 90% 50%, 95% 0,100% 50%,100%100%,0%100%);
+        transform-origin: left;
+        animation: progress-anime 10s linear forwards;
+
+        }
+        @keyframes progress-anime{
+            0%{
+                transform: scaleX(0);
+                
+            }
+
+            20%{
+                transform: scaleX(0.2);
+            }
+
+            40%{
+                transform: scaleX(0.4);
+            }
+
+            60%{
+                transform: scaleX(0.6);
+            }
+
+            80%{
+                transform: scaleX(0.8);
+            }
+
+            100%{
+                transform: scaleX(1);
+            }
+        }
+        
+           
+        
+    </style>
+        
+    
+</head>
+<body>
+    <div class="card">
+        <div class="progress-bar">
+            <!-- Progress bar content will go here -->
+        </div>
+    </div>
+</body>
+</html>
